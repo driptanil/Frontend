@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'SF Pro Display';
+    background: rgb(27, 27, 27);
+}
+
+
+#navigation nav{
+    background-color: rgb(64, 45, 41);
+    color: white;
+    padding: 2rem;
+    position: fixed;
+    top:0rem;
+    width: 100%;
+}
+
+
+.clear {
+    clear: both;
+}
+
+h1, h3 {
+    font-size: 2.8rem;
+    color: white;
+}
+
+h3 {
+    padding-bottom: 5rem;
+}
+
+h2 {
+    /* display: block; */
+    text-align: center;
+    left: 50%;
+    font-size: 4.6rem;
+    color: white;
+    padding: 7rem 0rem;
+}
+
+header {
+    transform: translate(0%, -10%);
+}
+
+.button {
+    transform: translate(0%, -50%);
+}
+
+h4 {
+    padding: 4rem 0rem;
+    font-size: 3rem;
+    color: white;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.75rem;
+    color: white;
+}
+
+button {
+    font-size:1.8rem;
+}
+
+nav h1 {
+    float: left;
+}
+
+nav ul {
+    float: right;
+    list-style: none;
+}
+
+nav li {
+    float: left;
+    margin: 0.5rem 2rem;
+}
+
+.hero {
+    background-image: url("/CSS3/10-mini-project/images/pexels-daria-shevtsova-edit.jpg");
+    height: 40rem;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding: 10rem;
+    text-shadow: 3px 3px 5px black;
+}
+
+.hero button {
+    margin: 8rem;
+    padding: 1rem 2.5rem;
+    border-radius: 0.5rem;
+    background: rgb(64, 45, 41);
+    color: white;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.hero button:hover {
+    background: rgb(96, 77, 73);
+}
+
+.form {
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.form input, .form label, .form textarea {
+    display: block;
+    margin: 1.5rem auto;
+}
+
+.form button {
+    margin: 4rem;
+    padding: 1rem 2.5rem;
+    border-radius: 0.5rem;
+    background: rgb(64, 45, 41);
+    color: white;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.form button:hover {
+    background: rgb(96, 77, 73);
+}
+
+.form input, .form textarea {
+    width: 25rem;
+    border-radius: 0.7rem;
+    padding: 0.5rem 0rem;
+}
+
+.form input:focus, .form textarea:focus {
+    background: rgb(233, 201, 193);
+}
+
+.form input:hover, .form textarea:hover {
+    background: rgb(181, 156, 150);
+}
+
+
+h5 {
+    width: 50%;
+    color: white;
+    font-size: 3.5rem;
+}
+
+.item1, .item2 {
+    max-width: 100rem;
+    height: 40rem;
+    margin: 2rem;
+    align-items: center;
+}
+
+.item1 {
+    float: right;
+    display: inline-block;
+    padding-right: 5rem;
+    transform : translate(0%, 5%);
+    padding-top: 3rem;
+} 
+
+.item1 h5 {
+    display: inline-block;
+    /* float: right; */
+    transform: translate(35%, -40%);
+    padding-right: 0.5rem;
+}
+
+.clear, .clear1, .clear2 {
+    clear: both;
+}
+
+
+.item2 h5{
+    display: inline-block;
+    /* width: 10rem; */
+    transform: translate(10%, -50%);
+    padding-left: 5rem;
+}
+
+.item2 {
+    float: left;
+    display: inline-block;
+    padding-left: 1rem;
+    padding-top: 10rem;
+}
+
+.icons img {
+    display: absolute;
+    padding: calc();
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img1 {
+    transform: translate(-40vw, -30vh);
+}
+
+.img2 {
+    transform: translate(-30vw, -20vh);
+}
+
+.img3 {
+    transform: translate(-15vw, -20vh);
+}
+
+.img4 {
+    left;
+}

@@ -1,0 +1,9 @@
+{
+    "editor.fontFamily": "CaskaydiaCove Nerd Font Mono, 'Courier New', monospace",
+    "editor.formatOnSave": true,
+    "files.autoSave": "afterDelay",
+    "cSpell.words": [
+        "Driptanil"
+    ],
+    "liveServer.settings.port": 5501
+}

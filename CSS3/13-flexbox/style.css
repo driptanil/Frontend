@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.container {
+    margin: 2px;
+    border: 3px solid black;
+    border-radius: 1%;
+    padding: 2px;
+    display: flex;
+    flex-direction: row-reverse;
+    /* row, row-reverse, column, column-reverse*/
+    
+    /* flex-wrap: wrap; */
+    /* wrapping */
+    
+    justify-content: center;
+    /* row: vertical align
+    column: horizontal align */
+    
+    align-items: center;
+    /* row: vertical align 
+    column: horizontal align*/
+    
+    height: 50vh;
+
+    /* align-items: stretch; */
+
+    flex: 1 1 20rem;
+    /* grow, shrink, basis */
+}
+
+div {
+    height: 20rem;
+    width: 20rem;
+    font-size: 2rem;
+    border: 1rem;
+}
+
+.box1 {
+    order: 6;
+    flex-grow: 1;
+    background: blueviolet;
+}
+
+.box2 {
+    flex-grow: 2;
+    background: royalblue;
+}
+
+.box3 {
+    flex-shrink: 0;
+    background: deepskyblue;
+}
+
+.box4 {
+    background: teal;
+}
+
+.box5 {
+    background: yellowgreen;
+}
+
+.box6 {
+    background: yellow;
+}
+
+.box7 {
+    background: orange;
+}
+
+.box8 {
+    background: tomato;
+}

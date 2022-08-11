@@ -1,0 +1,433 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Bahnschrift UltraLight', fantasy;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+#scroll {
+    align-items: inherit;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+#hero, #contact, #locations, #benefits{
+    scroll-snap-align: end;
+    height: 100vh;
+}
+
+#header {
+    position: initial;
+}
+
+nav {
+    background: rgba(34, 59, 76, 0.7);
+    width: 100%;
+    color: aliceblue;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    border-radius: 20px;
+    margin: 10px;
+    z-index: 100;
+}
+
+.header {
+    align-items: center;
+    flex-grow: 10;
+}
+
+nav .navigation {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-right: calc(0.5rem + 2vw);
+}
+
+nav .header h1 {
+    font-family: 'Great Day PERSONAL USE', cursive;
+    font-size: 3.8rem;
+    text-shadow: 4px 2px 3px black;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    transition: all 0.5s ease-in-out;
+}
+
+nav .header h1:hover {
+    font-size: 4rem;
+    text-shadow: 2px 10px 2px black;
+}
+
+ nav .navigation li {
+    /*float: right;*/
+    cursor: pointer;
+    list-style: none;
+    font-family: 'Bahnschrift UltraLight', fantasy;
+    padding: 1.2rem calc(0.1rem + 3vw) 1rem;
+    border-radius: 1rem;
+    /*margin-right: calc(1rem + 1vw);*/
+    font-size: 1.6rem;
+    margin: 0.5rem ;
+    background-color: rgba(0, 0, 0, 0.208);
+    transition: all 0.5s ease-in-out;
+}
+
+nav .navigation h1:hover {
+    font-size: 4rem;
+    text-shadow: 2px 8px 3px black;
+}
+
+nav .navigation li:hover {
+    font-size: 1.8rem;
+    background-color: rgba(0, 0, 0, 0.408);
+}
+
+@media screen and (max-width: 466px) {
+    .header h1{
+        text-align: center;
+    }
+}
+
+#locations, #benefits, #contact{
+    position: relative;
+}
+
+#hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(23, 36, 45, 1), rgba(23, 36, 45, .4)),url("./img/landing-page.jpg");
+    background-position: bottom;
+    min-height: calc(60rem + 6vw);
+    background-size: cover;
+    color: aliceblue;
+}
+
+#hero h2 {
+    font-family: 'Great Day PERSONAL USE', cursive;
+    font-size: calc(3rem + 3vw);
+    text-shadow: 2px 5px 5px black;
+    margin: 2rem;
+    transition: all 0.5s ease-in-out;
+}
+
+#hero h2:hover {
+    font-size: calc(3.2rem + 3vw);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+#hero p {
+    font-size: calc(1.2rem + 0.7vw);
+    /* text-shadow: 2px 2px 5px black; */
+    text-shadow: 2px 2px 5px rgb(23, 36, 45);
+    padding: 0.3rem;
+}
+
+#hero button {
+    cursor: pointer;
+    margin: calc(2rem + 1vw);
+    font-size: calc(1.4rem + 0.2vw);
+    width: calc(12rem + 2vw);
+    height: calc(3.5rem + 0.5vw);
+    border-radius: 0.75rem;
+    border-width: 0;
+    background-color: rgba(23, 36, 45, 0.508);
+    color: aliceblue;
+    transition: all 0.5s ease-in-out;
+}
+
+#hero button:hover {
+    margin: calc(2.2rem + 1vw);
+    font-size: calc(1.7rem + 0.2vw);
+    width: calc(15rem + 2vw);
+    height: calc(4rem + 0.5vw);
+    background: rgba(23, 36, 45);
+}
+
+#locations {
+    min-height: 100vh;
+    background: url(../15-project1/img/new-york-page.png), linear-gradient(rgba(23, 36, 45, 1), rgba(23, 36, 45, 0.5)), center;
+    background-size: cover;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.locations-header {
+    width: 90%;
+    margin: auto;
+}
+
+.locations-header h2 {
+    font-size: 3.5rem;
+    font-weight: normal;
+    text-shadow: 2px 1px 1px rgba(23, 36, 45, 0.5);
+    padding: 1rem 0;
+    color: rgb(255, 255, 255);
+}
+
+.locations-header h3 {
+    width: 70vw;
+    padding: 0.7rem 0;
+    background: linear-gradient(rgb(255, 255, 255), rgb(85, 208, 208));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: lighter;
+    /*font-size: calc(1.7rem + 0.2vw);*/
+}
+
+.clouds {
+    position: absolute;
+    width: calc(400px + 50vw);
+    top: 0;
+    right: -10%;
+}
+
+.move-cloud1 {
+    animation: cloudAnimation2 3s infinite alternate;
+}
+
+.move-cloud2 {
+    animation: cloudAnimation1 3.2s infinite alternate;
+    top: 10%;
+    right: 0;
+    z-index: -1;
+}
+
+@keyframes cloudAnimation1 {
+    from {
+        transform: translate(7%, -7%);
+    }
+    to {
+        transform: translate(0%, 0%);
+    }
+}
+
+
+@keyframes cloudAnimation2 {
+    from {
+        transform: translate(5%, -5%);
+    }
+    to {
+        transform: translate(0%, 0%);
+    }
+}
+
+.benefits-header {
+    background: linear-gradient(rgb(23, 36, 45), rgba(0, 0, 0, 0.75));
+    padding: 6rem 4rem;
+    display: flex;
+    color: rgba(255, 255, 255, 0.7);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.benefits-header h2 {
+    font-weight: normal;
+}
+.benefits-header h3 {
+    padding-top: 3rem;
+    font-size: 1.75rem;
+    font-weight: lighter;
+}
+
+.cards {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    padding: 5rem 0;
+    min-height: 40rem;
+    /*position: center;*/
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 0 1 30rem;
+    min-height: 30vh;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1), 0 20px 20px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    border-radius: 1.5rem;
+}
+
+.cards img {
+    height: 60px;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.card-icon {
+    display: flex;
+    border-radius: 1rem 1rem 0 0;
+    background: linear-gradient(rgba(23, 36, 45, 0.8), rgba(24, 75, 76, 0.8));
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.card-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card-section h4 {
+    font-size: 1.75rem;
+    font-weight: normal;
+    margin: 1rem 0;
+}
+
+.card-section p {
+    font-size: 1.4rem;
+    text-align: center;
+    margin: 1rem;
+}
+
+.card:hover{
+    cursor: pointer;
+    margin: 0.1rem;
+    min-height: 31vh;
+    background: linear-gradient(rgba(40, 89, 89, 0.3), rgb(255, 255, 255));
+    transition: all 0.6s ease-in-out;
+}
+
+.form-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    margin: 0.75rem 0;
+    border-radius: 2rem;
+}
+
+.form-main {
+    margin: auto;
+    background: rgba(255, 255, 255, 1);
+    display: flex;
+    flex: 0 1 95rem;
+    border-radius: 2rem;
+}
+
+.forms {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    /*margin: auto;*/
+}
+
+.form-main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem;
+    /*padding: 2rem;*/
+    border-radius: 2rem;
+}
+
+.form-image img{
+    width: 400px;
+    margin: 2rem;
+}
+
+#contact{
+    background: linear-gradient(rgba(23, 36, 45, 0.8), rgba(24, 75, 76, 0.8));
+    /*min-height: 50rem;*/
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    margin: auto;
+}
+
+#contact form p{
+    margin: 2rem;
+    font-weight: lighter;
+}
+
+#contact h4 {
+    margin-top: 2rem;
+    font-size: 3rem;
+    font-weight: normal;
+}
+
+#contact input {
+    margin: 0 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.37);
+    padding: 1.2rem;
+    border-radius: 1.5rem;
+    width: 22rem;
+    font-size: 1.3rem;
+    border: 0;
+}
+
+#contact input:focus, #contact input:hover{
+    outline: none;
+    /*background: rgba(255, 255, 255, 0.75);*/
+    /*font-size: calc(1.2rem + 0.2vw);*/
+    /*width: calc(20rem + 1vw);*/
+    /*height: calc(2.5rem + 0.5vw);*/
+    /*border-width: 0;*/
+    /*transition: all 0.5s ease-in-out;*/
+}
+
+#contact .checkbox input{
+    font-family: 'Bahnschrift UltraLight', fantasy;
+    width: 1.2rem;
+    height: 1.2rem;
+    color: #76BA99;
+}
+
+#contact .checkbox input:hover, #contact .checkbox input:focus{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+#contact button {
+    cursor: pointer;
+    font-size: calc(1rem + 0.2vw);
+    width: calc(12rem + 2vw);
+    height: calc(3.5rem + 0.5vw);
+    border-radius: 0.75rem;
+    border-width: 0;
+    background-color: rgba(84, 90, 97, 0.51);
+    transition: all 0.5s ease-in-out;
+}
+
+#contact button:hover{
+    font-size: calc(1.2rem + 0.2vw);
+    width: calc(15rem + 2vw);
+    height: calc(4rem + 0.5vw);
+    background: rgba(26, 50, 55, 0.58);
+    transition: all 0.5s ease-in-out;
+}
+

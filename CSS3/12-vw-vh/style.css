@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+div {
+    /* height: 100%; */
+    height: 50vh;
+    /* 50vh uses 50% of the height */ 
+    background: cadetblue;
+    font-size: calc(1.4rem + 1.5vw);
+}
+
+div h2 + p{
+    height: 50vh;
+    background: cornflowerblue;
+}
+
+div:nth-child(3) {
+    width: 50%;
+}
+
+div h3 {
+    background: darkviolet;
+    width: 100vw;
+    /* 100vw uses 100% of the width, which is independent of the parent */
+}
+
+div h3 + p {
+    background: violet;
+    height: 50vh;
+}
+
+@media (min-width: 768px) {
+
+}

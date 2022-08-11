@@ -1,0 +1,217 @@
+<!DOCTYPE html> 
+<!--specifies the document type-->
+
+<html>
+    <head>
+        <title>HTML 5</title> 
+        <!--adds title to page-->
+
+        <meta name="description" content="Sandwich Boy is a special Sandwich boy"> 
+        <!--adds description of page-->
+
+        <meta charset="UTF-8">
+        <!--setting a character encoding-->
+
+        <meta name="robots" content="index, follow">
+        <!--provides the instructor to the website crawler whether to index the webpages or not-->
+
+        <link rel="icon" href="/HTML5/img/construction_work.ico">
+        <!--adds .ico file as an icon of the webpage-->
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <!--sets the width of the webpage to the width of the device and sets a scale factor of 100%-->
+    </head>
+    <body>
+
+        <header>
+            <h1>Sandwich Boy</h1>
+            <!--heading 1 tag-->
+
+            <h2>Sandwich Boy</h2>
+            <!--heading 2 tag-->
+
+            <h3>Sandwich Boy</h3>
+            <!--heading 3 tag-->
+            
+            <h4>Sandwich Boy</h4>
+            <!--heading 4 tag-->
+
+            <h5>Sandwich Boy</h5>
+            <!--heading 5 tag-->
+
+            <h6>Sandwich Boy</h6>
+            <!--heading 6 tag-->
+        </header>
+        <!--header tag is a semantic-->
+        <!--Semantics are tags which describes meaning to both browser and developer-->
+
+        <p>Sandwich Boy is sandwiched with cheese</p>
+        <!--paragraph tag-->
+
+        <b>Bold</b>
+        <!--Bold text-->
+
+        <i>Italic</i>
+        <!--Italic text-->
+
+        <strong>Strong</strong>
+        <!--Strong text-->
+
+        <em>Emphasized</em>
+        <!--Emphasized text-->
+
+        <small>small</small>
+        <!--Small text-->
+
+        <mark>marked</mark>
+        <!--Highlighted text-->
+
+        <del>stricken out</del>
+        <!--Stricken-out text-->
+        
+        <br>
+        <!--br tag stands for break rule-->
+
+        <div>
+            <img 
+                width="300" 
+                src="./img/sandwich_boy.jpg" 
+                alt="Sandwich Boy" 
+            >
+            <!--img tag adds image to webpage-->
+            <!--src  attribute specifies the image file location-->
+            <!--alt attribute provides an alternative message when the image is unable to load-->
+
+            <video controls 
+                width="300"
+                src="./video/Ross_Sandwich_Boy.mp4">
+            </video>
+            <!--video tag adds video to webpage-->
+            <!--controls attribute allow controls for the video-->
+            <!--src attribute provides the location of the video-->
+            <!--source attribute is used to add multiple sources of the video of different formats-->
+            
+            <figcaption>My Sandwiches</figcaption>
+            <!--figcaption tag is used to add captions-->
+        </div>
+        <!--div tag works like a wrapper for a group tags -->
+
+        <h1>Forms</h1>
+        <form autocomplete="off" action="/HTML5/submitted.html">
+            
+            <p>
+                <label for="user">Username:</label>
+                <!--label tag adds a label to the input field-->
+                <input
+                    minlength="6"
+                    maxlength="10"
+                    name="user" 
+                    type="text" 
+                    id="user"
+                    placeholder="username"
+                    required
+                >
+            </p>
+            <!--minlength attribute sets the minimum length of user input-->
+            <!--maxlength attribute sets the maximum length of user input-->
+            <!--type attribute specifies the input type-->
+            <!--name attribute is actually stored-->
+            <!--id attribute adds an unique identifier to a tag-->
+            <!--required tag makes input compulsory-->
+
+            <p>
+                <label for="email">Email:</label>
+                <input 
+                    name="email" 
+                    type="email" 
+                    id="email" 
+                    placeholder="email"
+                    required
+                >
+             </p>
+
+            <p>
+                <label>Views on Sandwiches:</label>
+                <select name="likesSandwich">
+                    <option value="Idk">Not Selected</option>
+                    <option value="Yes">like Sandwiches</option>
+                    <option value="No">don't like Sandwiches</option>
+                    <!--option tag adds options to the dropdown menu-->
+                    <!--value attribute is actually stored-->
+                </select>
+                <!--select tag adds a dropdown menu-->
+            </p>
+
+            <p>
+                <label>Gender:</label>
+                <input type="radio" name="gender" value="male"> Male
+                <input type="radio" name="gender" value="female"> Female
+            </p>
+            <textarea name="message" id="message" cols="50" rows="5"></textarea>
+            
+            <p>
+                <button type="submit">Submit</button>
+                <!----button tag adds a button which is linked with the action attribute of form tag-->
+            </p>
+        </form>
+        <!--form tag is used to add forms in a webpage-->
+
+        <main>
+            <article>
+                <h2 class="Text"">Ingredients</h2>
+                <!--class used for as an identifier of a group of tags-->
+                <ul>
+                    <li>Bread</li>
+                    <li>Cheese</li>
+                    <li>Spread</li>
+                    <li>Eggs</li>
+                    <li>Chicken</li>
+                </ul>
+                <!--ul tag is used to add unordered lists-->
+
+                <h2 class="Text">Steps</h2>
+                <ol>
+                    <li>Toasting the Bread</li>
+                    <li>Making an Omelet</li>
+                    <li>Frying the Chicken</li>
+                    <li>Spreading the cheese</li>
+                    <li>Sandwiching the Chicken and Omelet with Bread</li>
+                </ol>
+                <!--ol table is used to add ordered lists-->
+            </article>
+
+            <section>
+                <table>
+                    <tr>
+                        <th>User</th>
+                        <!--th tag stands for table header-->
+                        <th>Email</th>
+                        <th>Age</th>
+                    </tr>
+                    <!--tr tag stands for table row-->
+                    <tr>
+                        <td>Driptanil</td>
+                        <!--td tag stand for table data-->
+                        <td>driprecovery@gmail.com</td>
+                        <td>19+</td>
+                    </tr>
+                </table>
+            </section>
+            <!--section tag is semantic-->
+
+            <aside>
+                <em>I love Sandwiches</em>
+            </aside>
+        </main>
+        <!--main tag is semantic-->
+
+        <footer>
+            <p>
+            Thanks for visiting !!!
+            </p>
+        </footer>
+        <!--footer tag is semantic-->
+
+        <p>Html Entities &pi; </p>
+    </body> 
+</html>

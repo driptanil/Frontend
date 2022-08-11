@@ -1,0 +1,116 @@
+* {
+    margin: 0;  
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.container {
+    background: cadetblue;
+    /* by default the background does not appear as no content is present */
+
+    width: 80%;
+    height: 300%;
+    margin: auto;
+    /* auto -> automatically allocates space according to the width */
+
+}
+
+html, body {
+    height: 100%;
+    /* this fixes the problem */
+}
+
+.box1, .box2, .box3, .box4, .box5, .box6, .box7 {
+    width: 20%;
+    height: 20%;
+    background: cornflowerblue;
+}
+
+.box2 {
+    background:hotpink;
+}
+
+.box3 {
+    background: indianred;
+}
+
+.box4 {
+    background: mediumpurple;
+}
+
+.box5 {
+    background: orchid;
+}
+
+.box6 {
+    background:black;
+}
+
+.box7 {
+    background: greenyellow;
+}
+
+.box1, .box5 {
+    position: static;
+    /* by default all elements are static */
+    position: absolute;
+    /* box1 stops following the normal document flow */
+    bottom: 0rem;
+    /* box1 gets stuck at the bottom screen*/
+    left: 0rem;
+    /* box1 gets stuck at the left edge of the screen */
+}
+
+.box2, .box4 {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    /* box2 is not really at the center, it starts from center */
+}
+
+.box3 {
+    transform: translateX(100%);
+    /* moves box3, 100% of the length of box towards right */
+}
+
+.box2 {
+    transform: translate(-50%, -50%);
+    /* moves box2, 50% of length towards left & 50% of height upwards */
+}
+
+
+.container {
+    position: relative;
+}
+/* relative constraints to parent element */
+.box1 {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+}
+
+.box3 {
+    position: relative;
+    left: 1rem;
+    /* box3 moves 1 rem towards left for it original position */
+}
+
+.box6 {
+    position: fixed;
+    /* fixed while scrolling */
+    left: 22rem;
+    width: 5rem;
+}
+
+.box7 {
+    position: sticky;
+    top: 2rem;
+    /* box7 sticks at the top while scrolling */
+    width: 5rem;
+    height: 30rem;
+    left: 15rem;
+}

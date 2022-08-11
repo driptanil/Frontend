@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+button {
+    padding: 2rem 4rem;
+    cursor: pointer;
+}
+
+input {
+    width: 30rem;
+    padding: 0.9rem;
+}
+
+button:hover {
+    background: cornflowerblue
+}
+
+button:focus, input:focus {
+    background: plum;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h1::after {
+    content: " Welcome";
+}

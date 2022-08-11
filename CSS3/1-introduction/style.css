@@ -1,0 +1,46 @@
+h1 {
+    color: cornflowerblue;
+}
+/* adds styles to all h1 tag */
+
+.first-title {
+    color: rgb(226, 132, 255);
+}
+/* adds styles to 'first-title' class by adding a dot '.' at the starting */
+
+#youtube-link {
+    color: deeppink
+}
+/* adds styles to 'youtube-link' id by adding a hash '#' at the starting */
+
+.random h2{
+    color: mediumpurple
+}
+/* adds styles to h1 tags in 'random' class */
+
+* {
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/* adds styles to all tags */
+
+.random + ul {
+    list-style: lower-roman;
+}
+/* adds styles to ul tag which just after 'random' class */
+
+ul > li {
+    color: coral
+}
+/* adds styles only to li tags in ul tag */
+
+ul > li a {
+    color: aquamarine
+}
+/* adds styles only to a tag in li tag in ul tag */
+
+.development li:nth-child(3){
+    color: gold
+}
+/* adds styles only to the 3rd child of li tag in 'development' class */
+/* nth-child is searching the given in the given class */

@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+h1 {
+    height: 2rem;
+    background: darkgrey;
+    width: 50rem;
+    height: 4rem;
+    text-align: center;
+}
+/* h1 element are displayed as block elements */
+
+a {
+    background: darkgrey;
+    width: 50rem;
+    height: 4rem;
+    /* width and height does not work for inline elements */
+    margin: 2rem;
+    padding : 0.5rem;
+    /* but margin and padding works with inline elements */
+}
+/* by default a element are inline elements */
+
+
+.link1{
+    display: inline-block;
+    /* coverts inline to inline-block elements and does not add a new line */
+    width: 8rem;
+    height: 3rem;
+    padding: 1rem;
+    text-align: center;
+    background: darksalmon
+}
+
+.link2 {
+    display: block;
+    /* converts inline to block elements and occupies the entire line */
+    background: cadetblue;
+    width: 8rem;
+    height: 4rem;
+    /* here width and height works */
+    padding: 1.3rem;
+    text-align: center;
+}

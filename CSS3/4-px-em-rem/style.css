@@ -1,0 +1,41 @@
+/* .text-section div{
+    font-size: 20px;
+}
+
+.text-section {
+    font-size: 15px;
+} */
+
+html {
+    /* font-size: 16px; */
+    /* by default */
+
+    font-size: 62.5%;
+    /* browser font size * 62.5% = root font size */
+}
+/* html is the root element */
+
+.text-section {
+    font-size: 1.5em;
+}
+/* font size = 10px * 1.5em = 15 px */
+
+.text-section div {
+    font-size: 1.5em;
+    margin: 1.5em;
+}
+/* font size = 15 px * 1.5em = 22.5px */
+/* margin = 15 px * 1.5em = 33.75px */
+
+.greeting {
+    font-size: 12px;
+    margin: 2em;
+}
+/* margin = 12px * 2em= 24px */
+/* em only inherits the line with px in it */
+
+.salutation {
+    font-size: 2rem;
+}
+/* rem is respect to the root element i.e. html and does not inherit*/
+/* font-size = 16px * 2rem = 32px */
