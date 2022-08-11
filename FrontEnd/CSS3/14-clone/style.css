@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+header nav li{
+    font-family: 'Cascadia Code', sans-serif;
+    display: inline;
+    padding: 1.6rem;
+    font-size: 1.4rem;
+}
+
+header nav {
+    margin: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+}
+
+header nav li h1 {
+    font-family: 'Great Day PERSONAL USE', cursive;
+    font-size: 5rem;
+    padding: 1.5rem;
+}
+
+header nav li a {
+    text-decoration: none;
+    color: black;
+}
+
+.hero-intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 30vh;
+    background-image: url('./images/pexels-fauxels-3183165.jpg');
+    background-size: cover;
+    font-family: 'Bahnschrift UltraLight', fantasy;
+    color: whitesmoke;
+    font-size: 2rem;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.hero-intro h2{
+    text-shadow: 2px 5px 2px black;
+    text-align: center;
+    margin-bottom: 2rem;
+    background-color: rgba(0, 0, 0, 0.127);
+}
+
+.hero-intro button {
+    text-align: center;
+    padding: 0.7rem 3rem;
+    background-color: rgba(47, 15, 15, 0.508);
+    color: white;
+    font-size: 2rem;
+    font-family: 'Bahnschrift Light';
+    border-radius: 1rem;
+}
+
+.hero-intro + h1 {
+    font-family: 'Great Day PERSONAL USE';
+    font-size: 4rem;
+    padding: 2.5rem;
+    text-align: center;
+}
+
+.projects {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects div {
+    margin: 0.5rem;
+    width: 20rem;
+    height: 35rem;
+    border-radius: 1rem;
+}
+
+.div4 {
+    background-color: #76BA99;
+}
+
+.div3{
+    background-color: #ADCF9F;
+}
+
+.div2{
+    background-color: #CED89E;
+}
+
+.div1 {
+    background-color: #FFDCAE;
+}
+
+.projects div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 2rem;
+    font-family: 'Bahnschrift Light';
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.div1 h2 {
+    font-size: 3rem;
+}
+
+.projects img{
+    width: 18rem;
+    padding-bottom: 0.1rem;
+}

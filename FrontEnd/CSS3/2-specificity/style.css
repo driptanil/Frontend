@@ -1,0 +1,51 @@
+h1 {
+    color: coral
+}
+h1 {
+    color: cornflowerblue
+}
+/* 2nd h1 styles overrides the 1st h1 styles */
+/* CSS works for top to bottom */
+
+
+#paragraph {
+    color: gold
+}
+/* Selector Specificity: (1, 0, 0) */
+
+.header2 {
+    color: aquamarine
+}
+/* Selector Specificity: (0, 1, 0) */
+
+h2 {
+    color:darkorange /* !important */
+}
+/* Selector Specificity: (0, 0, 1) */
+
+/* `!important` > html attribute > id > class > tag is independent of the order */
+
+#header3 {
+    color: darkorchid
+}
+
+h3 {
+    color:greenyellow !important
+}
+/* Using `!important` is not advised (don't use them) */
+
+
+h4.header4 {
+    color: violet
+}
+/* Selector Specificity: (0, 1, 1) */
+
+.header4 {
+    color: blueviolet
+}
+/* Selector Specificity: (0, 1, 0) */
+
+h4 {
+    color: dodgerblue
+}
+/* Selector Specificity: (0, 0, 1) */

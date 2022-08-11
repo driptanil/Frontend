@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: lightslategray;
+}
+
+h1 {
+    font: size 4.8rem;
+}
+
+@media (max-width: 768px) {
+    body {
+        background: cornflowerblue;
+    }
+}
+/* this is the same */
+
+@media screen and (max-width: 500px) {
+    body {
+        background: cadetblue;
+    }
+    .mobile {
+        font-size: 2.4rem;
+    }
+}
+/* this runs only when maximum weight < 500px */
