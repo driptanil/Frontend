@@ -1,0 +1,14 @@
+@use '../util' as u;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: u.$font;
+}

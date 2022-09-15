@@ -1,0 +1,85 @@
+.releases {
+    margin: 10rem auto;
+    width: 80%;
+    position: relative;
+    z-index: -1;
+
+
+    &__textBox {
+        // margin: 10rem auto;
+        width: 80%;
+        position: relative;
+        z-index: -1;
+        margin: 10rem auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & h2 {
+            font-size: 6rem;
+        }
+
+        & p {
+            margin: 0 6rem;
+            line-height: 1.75rem;
+            font-size: 1.3rem;
+            width: 300px;
+        }
+    }
+
+    &__albums {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &__left, &__mid, &__right { 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        &__mid {
+            flex-wrap: nowrap;
+
+            & img {
+                width: 15px;
+                position: sticky;
+                top: 40px;
+            }
+
+            &__line {
+                padding: 100vh 0.15rem;
+                background-color: #666666;
+            }
+        }
+
+    }
+
+    &__record {
+        position: sticky;
+        top: 50px;
+        background: linear-gradient( rgba(82, 82, 82, 0.8), rgb(32, 32, 32));
+        margin: 2rem;
+        border-radius: 10px;
+        padding: 2rem;
+        box-shadow: 5px -5px 10px rgba(0, 0, 0, 1);
+
+        &__vinyl {
+            height: 40rem;
+            border-radius: 8px;
+            filter: brightness(80%);
+        }
+
+        & h3 {
+            margin: 1rem;
+            font-size: 2rem;
+            display: inline-block;
+        }
+
+        & p {
+            margin-left: 1rem;
+            font-size: 1.2rem;
+        }
+    }
+}
