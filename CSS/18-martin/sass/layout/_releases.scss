@@ -1,0 +1,135 @@
+$tablet: 1100px;
+$mobile: 800px;
+$less-mobile: 550px;
+
+
+.releases {
+    padding-top: 1rem;
+    margin: 10rem auto;
+    width: 80%;
+    position: relative;
+    z-index: -1;
+
+
+    &__textBox {
+        // margin: 10rem auto;
+        width: 80%;
+        position: relative;
+        z-index: -1;
+        margin: 5rem auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media screen and (max-width: $tablet){
+            flex-direction: column;
+        }
+
+        & h2 {
+            font-size: 6rem;
+            width: 30rem;
+        }
+
+        & p {
+            margin: 0 1rem;
+            line-height: 1.75rem;
+            font-size: 1.7rem;
+            width: 300px;
+        }
+    }
+
+    &__track {
+        position: absolute;
+        left: 49.5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        
+
+        @media screen and (max-width: $mobile) {
+            left: -2rem;
+        }
+
+        & img {
+            width: 15px;
+            position: sticky;
+            top: 15rem;
+        }
+
+        &__line {
+            padding: 100vh 0;
+            width: 0.15rem;
+            background-color: #666666;
+
+            @media screen and (max-width: $mobile) {
+                padding: 190vh 0;
+            }
+        }
+    }
+
+    &__albums {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media screen and (max-width: $mobile) {
+            flex-direction: column;
+        }
+
+
+        &__left &__right { 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+    }
+
+    &__record {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        position: sticky;
+        top: 15rem;
+        background: linear-gradient( rgba(82, 82, 82, 0.8), rgb(32, 32, 32));
+        margin: 2rem;
+        border-radius: 10px;
+        padding: 2rem;
+        box-shadow: 5px -5px 10px rgba(0, 0, 0, 1);
+
+        &__vinyl {
+            width: 40rem;
+            border-radius: 8px;
+            filter: brightness(80%);
+
+            @media screen and (max-width: $tablet) and (min-width: $mobile){
+                width: 35rem;
+                margin: -0.25rem;
+            }
+
+            @media screen and (max-width:$less-mobile) {
+                width: 30rem;
+                margin: -0.8rem;
+            }
+        }
+
+        & h3 {
+            margin: 2rem 0;
+            font-size: 2rem;
+            display: inline-block;
+        }
+
+        & p {
+            justify-self: left;
+            // margin-left: 1rem;
+            font-size: 1.2rem;
+        }
+
+        
+    }
+}

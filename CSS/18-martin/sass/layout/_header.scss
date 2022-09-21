@@ -1,6 +1,7 @@
 .header {
     $p: &;
-
+    position: fixed;
+    // transform: translate(0, -100%);
     width: 99%;
     height: 8rem;
     margin: 0 auto;
@@ -11,14 +12,14 @@
     justify-content: center;
 
     &__hollow, &__fill {
-        transform: translate(20%, 8%);
+        transform: translate(20%, -158%);
         height: 5rem;
         z-index: 10;
     }
 
     &__fill {
         margin: 1.5rem auto 1.5rem 2rem;
-        transform: translate(-100%, 0%);
+        transform: translate(-100%, -150%);
         opacity: 0;
         transition: opacity 0.7s ease;
 
@@ -39,6 +40,7 @@
         z-index: 10;
         cursor: pointer;
         opacity: 0;
+        transform: translate(0, -200%);
         
         &:checked {
             & + #{$p}__links {
@@ -76,6 +78,10 @@
         position: fixed;
         top: 0;
         font-size: 2rem;
+        
+        // overflow: hidden;
+        // scrollbar-width: none;
+
         left: 100%;
         flex-direction: column;
         transition: transform 1s ease;
@@ -106,7 +112,7 @@
 
     &__burger {
         margin: 2rem;
-
+        transform: translate(0, -200%);
         & span {
             transform: translate(0%, 35%);
             display: block;

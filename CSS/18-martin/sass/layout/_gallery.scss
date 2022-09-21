@@ -1,0 +1,100 @@
+$margin : 0.5rem;
+$radius : 8px;
+$scale: 1.2;
+$border: 3px;
+.gallery {
+    width: 90%;
+    margin: 10rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     &__grid {
+          z-index: -1;
+          display: grid;
+          margin: auto;
+          grid-template-rows: repeat(2, calc(10rem*$scale)) calc(5rem*$scale) repeat(3, calc(10rem*$scale));
+          grid-template-columns: repeat(2, calc(20rem*$scale)) calc(30rem*$scale) calc(20rem*$scale);
+          grid-template-areas:
+               'box1 box2 box2 box3'
+               'box1 box2 box2 box3'
+               'box1 box6 box6 box3'
+               'box1 box6 box6 box5'
+               'box4 box4 box4 box5'
+               'box4 box4 box4 box5';
+          filter: brightness(0.8);
+
+          @media screen and (max-width: 1000px) {
+               grid-template-rows: repeat(2, 15rem) repeat(2, 20rem) 25rem;
+               grid-template-columns: repeat(2, 10rem) 20rem repeat(2, 10rem);
+               grid-template-areas:
+                    'box1 box1 box2 box2 box2'
+                    'box1 box1 box6 box6 box6'
+                    'box3 box3 box3 box5 box5'
+                    'box3 box3 box3 box5 box5'
+                    'box4 box4 box4 box4 box4';
+          }
+
+       &__box1 {
+            grid-area: box1;
+            background: url(https://www.billboard.com/wp-content/uploads/media/martin-garrix-2017-cr-Rachel-Kaplan-billboard-1548.jpg);
+            background-size: cover;
+            background-position: center;
+            border-radius: $radius;
+            border: $border solid rgb(71, 179, 192);
+            margin: $margin;
+       }
+
+       &__box2 {
+            grid-area: box2;
+            background: url(https://static1.squarespace.com/static/5af3534355b02c33fb7dbdfd/5af3f8bf1ae6cfb8be195a83/5b97bc640ebbe8b81e0995d7/1536844405186/martin-garrix.jpgmartin-garrix?format=original);
+            background-size: cover;
+            background-position: top;
+            border: $border solid rgb(183, 147, 231);
+            margin: $margin;
+            border-radius: $radius;
+       }
+
+       &__box3 {
+            grid-area: box3;
+            background: url(https://edm.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTY3NDkzODI3NTk3MTgyODYy/zedd-martin-garrix-rukes-omnia.jpg);
+            background-size: cover;
+            background-position: center;
+            margin: $margin;
+            border: $border solid rgb(20, 148, 229);
+            border-radius: $radius;
+       }
+
+       
+       &__box4 {
+            margin: $margin;
+            grid-area: box4;
+            background: url(https://cdn.aspentimes.com/wp-content/uploads/sites/5/2018/01/bgarrix-atd-012618-2.jpg);
+            background-position: center;
+            background-size: cover;
+            border-radius: $radius;
+            border: $border solid rgb(197, 227, 255);
+       }
+
+       &__box5 {
+            grid-area: box5;
+            margin: $margin;
+            background: url(https://dancingastronaut.com/wp-content/uploads/2020/03/Martin-Garrix-EUFA.jpg);
+            background-size: cover;
+            background-position: center;
+            border-radius: $radius;
+            border: $border solid rgb(116, 194, 212);
+       }
+
+       &__box6 {
+            grid-area: box6;
+            background: url(https://images.indulgexpress.com/uploads/user/imagelibrary/2019/9/17/original/DutchDJMartinGarrixPhotoTwitterMartinGarrix.jpg);
+            background-size: cover;
+            background-position: top;
+            margin: $margin;
+            border-radius: $radius;
+            border: $border solid rgb(184, 152, 153);
+       }
+       
+   }
+
+}
