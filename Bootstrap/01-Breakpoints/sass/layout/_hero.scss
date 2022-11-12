@@ -1,0 +1,52 @@
+
+$xs: 0;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+.para{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 8px;
+    margin: 1rem;
+    padding: 2rem;
+}
+
+ // No media query necessary for xs breakpoint as it's effectively `@media (min-width: 0) { ... }`
+@media (min-width: $xs) { 
+    .para {
+        background: mediumslateblue;
+    }
+}
+
+@media (min-width: $md) { 
+    .para {
+        margin: 2rem 5rem;
+        background: teal;
+    }
+}
+
+@media (min-width: $lg) { 
+    .para {
+        margin: 2rem 10rem;
+        background: royalblue;
+    }
+}
+
+@media (min-width: $xl) { 
+    .para {
+        margin: 2rem 15rem;
+        background: cornflowerblue;
+    }
+}
+
+@media (min-width: $xxl) { 
+    .para {
+        margin: 2rem 20rem;
+        background: slateblue;
+    }
+}

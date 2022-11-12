@@ -1,0 +1,232 @@
+@use "../global/colors" as c;
+
+.todo {
+    &__header {
+        margin: 4rem 0;
+        display: flex;
+        align-items: center;
+        font-size: 3rem;
+        justify-content: center;
+        font-weight: 400;
+        color: c.$Wisteria;
+        text-shadow: 0px 4px 8px c.$Amethyst;
+    }
+
+    &__background {
+        display: grid;
+        position: fixed;
+    
+        grid-template-areas:
+            "circle1 circle5 circle2"
+            "circle4 circle3 circle6";
+        // grid-template-rows: repeat(3, 1fr);
+        // grid-template-columns: repeat(2, 1fr);
+        
+        &__circle1, &__circle2, &__circle3, &__circle4, &__circle5, &__circle6 {   
+            width: 30vw;
+            height: 30vw;
+            // background-color: black;
+            border-radius: 50%;
+            filter: blur(7rem);
+            opacity: 70%;
+        }
+
+        &__circle1 {
+            background-color: c.$FrenchViolet;
+            grid-area: circle1;
+        }
+
+        &__circle2 {
+            background-color: c.$Amethyst;
+            grid-area: circle2;
+        }
+
+        &__circle3 {
+            background-color: c.$Celeste;
+            grid-area: circle3;
+        }
+
+        &__circle4 {
+            grid-area: circle4;
+        }
+
+        &__circle5 {
+            grid-area: circle5;
+        }
+
+        &__circle6 {
+            grid-area: circle6;
+        }
+    }
+
+    &__form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &__input {
+            background-color: rgba(c.$Wisteria, 0.3);
+            font-size: 1rem;
+            opacity: 75%;
+            border: none;
+            padding: 0.9rem;
+            border-radius: 8px 0 0 8px;
+            width: 50%;
+            color: white;
+            // box-shadow: 0 0 100px c.$lightblue;
+            &:focus {
+                outline: none;
+            }
+        }
+
+        &__button {
+            border: none;
+            padding: 1rem;
+            border-radius: 0 8px 8px 0;
+            background-color: c.$Wisteria;
+            color: c.$FrenchViolet;
+            transition: all 0.7s ease-in-out;
+
+            &:hover {
+                background-color: c.$FrenchViolet;
+                color: c.$Wisteria;
+                opacity: 70%;
+            }
+        }
+        
+        &__select {
+            margin: 1rem;
+            position: relative;
+            overflow: hidden;
+            opacity: 70%;
+            
+            &__filter {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                outline: none;
+                border: none;
+                box-shadow: none;
+                -webkit-text-fill-color: white;
+                color: rgba(c.$FrenchViolet, 1);
+                background-color: rgba(c.$Wisteria, 0.3);
+                padding: 1rem;
+                padding-right: 2.5rem;
+                border-radius: 8px;
+                cursor: pointer;
+            }
+
+            &::after {
+                content: "\25BC";
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding: 0.9rem 0.5rem;
+                border-radius: 0 8px 8px 0;
+                transition: all 0.7s ease-in-out;
+                pointer-events: none;
+                color: c.$FrenchViolet;
+                background-color: c.$Wisteria;
+            }
+    
+            &:hover::after {
+                background-color: c.$FrenchViolet;
+                color: white;
+                opacity: 70%;
+            }
+        }
+    }
+
+    &__container {
+        margin: 3rem;
+        &__list {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            list-style: none;
+
+            &__point {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                opacity: 70%;
+                
+                &__complete {
+                    opacity: 45%;
+                }
+
+                &__item {
+                    padding: 1rem;
+                    margin-bottom: 0.75rem;
+                    font-size: 1rem;
+                    background-color: rgba(c.$Amethyst, 0.3);
+                    border-radius: 8px 0 0 8px;
+
+                    &__stricken {
+                        text-decoration: line-through;
+                    }
+                }
+
+                &__check {
+                    padding: 1.25rem;
+                    margin-bottom: 0.75rem;
+                    color: c.$green;
+                    background-color: rgba(c.$Amethyst, 0.3);
+                    border: none;
+                    transition: all 0.7s ease-in-out;
+                    cursor: pointer;
+                    
+                    &:hover {
+                        background-color: rgba(c.$green, 0.75);
+                        color: white;
+                        // opacity: 70%;
+                    }
+                }
+
+                &__checked {
+                    background-color: c.$green;
+                    color: rgba(c.$Amethyst, 1);
+                }
+
+                &__trash {
+                    padding: 1.25rem;
+                    margin-bottom: 0.75rem;
+                    color: c.$red;
+                    background-color: rgba(c.$Amethyst, 0.3);
+                    border: none;
+                    border-radius: 0 8px 8px 0;
+                    transition: all 0.7s ease-in-out;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: c.$red;
+                        // opacity: 70%;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 800px){
+    .todo {
+        &__background {
+            grid-template-areas:
+                "circle1 circle5"
+                "circle4 circle2"
+                "circle3 circle6";
+
+            &__circle1, &__circle2, &__circle3, &__circle4, &__circle5, &__circle6 {   
+                width: 30vh;
+                height: 30vh;
+                // background-color: black;
+                border-radius: 50%;
+                filter: blur(7rem);
+                opacity: 70%;
+            }
+        }
+    }
+}

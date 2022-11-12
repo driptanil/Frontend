@@ -1,0 +1,14 @@
+@use "../global/colors" as c;
+@use "../util" as u;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: c.$DarkViolet;
+    font-family: u.$font;
+    color: white;
+}

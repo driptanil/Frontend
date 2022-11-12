@@ -1,0 +1,208 @@
+@charset "UTF-8";
+@font-face {
+  font-family: Outfit;
+  @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300&display=swap");
+}
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+  transition: all 0.5s ease-out;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #110B17;
+  font-family: Outfit, sans-serif;
+  color: white;
+}
+
+.todo__header {
+  margin: 4rem 0;
+  display: flex;
+  align-items: center;
+  font-size: 3rem;
+  justify-content: center;
+  font-weight: 400;
+  color: #B298DC;
+  text-shadow: 0px 4px 8px #A663CC;
+}
+.todo__background {
+  display: grid;
+  position: fixed;
+  grid-template-areas: "circle1 circle5 circle2" "circle4 circle3 circle6";
+}
+.todo__background__circle1, .todo__background__circle2, .todo__background__circle3, .todo__background__circle4, .todo__background__circle5, .todo__background__circle6 {
+  width: 30vw;
+  height: 30vw;
+  border-radius: 50%;
+  filter: blur(7rem);
+  opacity: 70%;
+}
+.todo__background__circle1 {
+  background-color: #6F2DBD;
+  grid-area: circle1;
+}
+.todo__background__circle2 {
+  background-color: #A663CC;
+  grid-area: circle2;
+}
+.todo__background__circle3 {
+  background-color: #B9FAF8;
+  grid-area: circle3;
+}
+.todo__background__circle4 {
+  grid-area: circle4;
+}
+.todo__background__circle5 {
+  grid-area: circle5;
+}
+.todo__background__circle6 {
+  grid-area: circle6;
+}
+.todo__form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.todo__form__input {
+  background-color: rgba(178, 152, 220, 0.3);
+  font-size: 1rem;
+  opacity: 75%;
+  border: none;
+  padding: 0.9rem;
+  border-radius: 8px 0 0 8px;
+  width: 50%;
+  color: white;
+}
+.todo__form__input:focus {
+  outline: none;
+}
+.todo__form__button {
+  border: none;
+  padding: 1rem;
+  border-radius: 0 8px 8px 0;
+  background-color: #B298DC;
+  color: #6F2DBD;
+  transition: all 0.7s ease-in-out;
+}
+.todo__form__button:hover {
+  background-color: #6F2DBD;
+  color: #B298DC;
+  opacity: 70%;
+}
+.todo__form__select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+  opacity: 70%;
+}
+.todo__form__select__filter {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  -webkit-text-fill-color: white;
+  color: #6f2dbd;
+  background-color: rgba(178, 152, 220, 0.3);
+  padding: 1rem;
+  padding-right: 2.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.todo__form__select::after {
+  content: "▼";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.9rem 0.5rem;
+  border-radius: 0 8px 8px 0;
+  transition: all 0.7s ease-in-out;
+  pointer-events: none;
+  color: #6F2DBD;
+  background-color: #B298DC;
+}
+.todo__form__select:hover::after {
+  background-color: #6F2DBD;
+  color: white;
+  opacity: 70%;
+}
+.todo__container {
+  margin: 3rem;
+}
+.todo__container__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  list-style: none;
+}
+.todo__container__list__point {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 70%;
+}
+.todo__container__list__point__complete {
+  opacity: 45%;
+}
+.todo__container__list__point__item {
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  background-color: rgba(166, 99, 204, 0.3);
+  border-radius: 8px 0 0 8px;
+}
+.todo__container__list__point__item__stricken {
+  text-decoration: line-through;
+}
+.todo__container__list__point__check {
+  padding: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #40f981;
+  background-color: rgba(166, 99, 204, 0.3);
+  border: none;
+  transition: all 0.7s ease-in-out;
+  cursor: pointer;
+}
+.todo__container__list__point__check:hover {
+  background-color: rgba(64, 249, 129, 0.75);
+  color: white;
+}
+.todo__container__list__point__checked {
+  background-color: #40f981;
+  color: #a663cc;
+}
+.todo__container__list__point__trash {
+  padding: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #fa556b;
+  background-color: rgba(166, 99, 204, 0.3);
+  border: none;
+  border-radius: 0 8px 8px 0;
+  transition: all 0.7s ease-in-out;
+  cursor: pointer;
+}
+.todo__container__list__point__trash:hover {
+  background-color: #fa556b;
+  color: white;
+}
+
+@media screen and (max-width: 800px) {
+  .todo__background {
+    grid-template-areas: "circle1 circle5" "circle4 circle2" "circle3 circle6";
+  }
+  .todo__background__circle1, .todo__background__circle2, .todo__background__circle3, .todo__background__circle4, .todo__background__circle5, .todo__background__circle6 {
+    width: 30vh;
+    height: 30vh;
+    border-radius: 50%;
+    filter: blur(7rem);
+    opacity: 70%;
+  }
+}

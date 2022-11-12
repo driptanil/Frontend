@@ -6,5 +6,12 @@
         "Driptanil"
     ],
     "liveServer.settings.port": 5501,
-    "prettier.tabWidth": 4
+    "prettier.tabWidth": 4,
+    "prettier.bracketSameLine": true,
+    "prettier.useTabs": true,
+    "debug.console.fontSize": 11,
+    "terminal.integrated.fontSize": 13,
+    "terminal.integrated.lineHeight": 1.1,
+    "git.ignoreLimitWarning": true,
+    "customizeUI.font.regular": "SF Pro Display"
 }

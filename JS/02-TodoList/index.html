@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=firefox">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Todo List</title>
+</head>
+<body>
+    <div class="todo__background">
+        <div class="todo__background__circle1"></div>
+        <div class="todo__background__circle2"></div>
+        <div class="todo__background__circle3"></div>
+        <div class="todo__background__circle4"></div>
+        <div class="todo__background__circle5"></div>
+        <div class="todo__background__circle6"></div>
+    </div>
+    <h1 class="todo__header">
+        Drip's Todo List
+    </h1>
+
+    <form class="todo__form">
+        <input type="text" class="todo__form__input">
+        <button class="todo__form__button" type="submit">
+            <i class="fa-solid fa-square-plus todo__form__button__plus"></i>
+        </button>
+    
+        <div class="todo__form__select">
+            <select autocomplete='off' name="filter" class="todo__form__select__filter">
+                <option value="all">All</option>
+                <option value="complete">Complete</option>
+                <option value="notComplete">Not Complete</option>
+            </select>
+          </div>
+    </form>
+
+    <div class="todo__container">
+        <ul class="todo__container__list">
+        </ul>
+    </div>
+    
+    <script src="./js/script.js"></script>
+</body>
+</html>
