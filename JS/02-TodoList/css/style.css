@@ -34,6 +34,7 @@ html {
 .todo__background {
   display: grid;
   position: fixed;
+  z-index: -1;
   grid-template-areas: "circle1 circle5 circle2" "circle4 circle3 circle6";
 }
 .todo__background__circle1, .todo__background__circle2, .todo__background__circle3, .todo__background__circle4, .todo__background__circle5, .todo__background__circle6 {

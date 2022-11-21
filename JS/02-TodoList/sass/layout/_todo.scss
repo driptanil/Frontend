@@ -15,7 +15,7 @@
     &__background {
         display: grid;
         position: fixed;
-    
+        z-index: -1;
         grid-template-areas:
             "circle1 circle5 circle2"
             "circle4 circle3 circle6";
