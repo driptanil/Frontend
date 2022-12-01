@@ -1,5 +1,5 @@
 {
-	"editor.fontFamily": "\"Fira Code iScript\", JetBrainsMono Nerd Font Mono, CaskaydiaCove Nerd Font Mono, monospace",
+	"editor.fontFamily": "CaskaydiaCove Nerd Font Mono, JetBrainsMono Nerd Font Mono, \"Fira Code iScript\" , monospace",
 	"editor.formatOnSave": true,
 	"files.autoSave": "afterDelay",
 	"cSpell.words": ["Driptanil"],
