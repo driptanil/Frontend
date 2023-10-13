@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: "Poppins", sans-serif;
+	font-size: 92.5%;
+	padding-bottom: 10rem;
+	background-image: linear-gradient(
+		90deg,
+		#020024 0%,
+		#290979 35%,
+		#9a5cff 100%
+	);
+	-webkit-font-smoothing: antialiased;
+}
+
+caption {
+	margin: 1rem;
+	font-size: 1rem;
+	margin-top: 5rem;
+}
+
+.App {
+	min-height: 100vh;
+	max-width: 70rem;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	font-size: calc(10px + 2vmin);
+	color: rgb(222, 203, 255);
+	text-align: center;
+	flex-wrap: wrap;
+	padding: 5rem;
+	list-style: none;
+}
+
+.box {
+	width: 10rem;
+	height: 10rem;
+	background-color: rgba(255, 255, 255, 0.3);
+	border-radius: 2rem;
+}
+
+button {
+	border: none;
+	scale: 0.9;
+}
+
+.cursor {
+	width: 10rem;
+	height: 10rem;
+	background-color: rgba(255, 255, 255, 0.5);
+	border-radius: 2rem;
+}
+
+.position {
+	transform: translate(5%, 10%);
+}
+
+.transparent {
+	background: rgba(255, 255, 255, 0.2);
+	width: 20rem;
+	height: 20rem;
+	border-radius: 2rem;
+}
+
+.switch {
+	background: rgba(255, 255, 255, 0.2);
+	width: 14rem;
+	height: 9rem;
+	border-radius: 10rem;
+	display: flex;
+	justify-content: flex-start;
+	padding: 1rem;
+}
+
+.switch[data-isOn="true"] {
+	justify-content: flex-end;
+}
+
+.handle {
+	width: 7rem;
+	height: 7rem;
+	border-radius: 10rem;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+.openCenter {
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+.openBorder {
+	width: 7rem;
+	height: 7rem;
+	padding: 2rem;
+	border-radius: 50%;
+	background-color: rgba(255, 255, 255, 0.2);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.openBorder[data-isOpen="true"] {
+	width: 25rem;
+	height: 15rem;
+	border-radius: 5rem;
+}
+
+.scrollBg {
+	stroke: rgba(255, 255, 255, 0.5);
+	opacity: 0.3;
+}
+
+#progress {
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	transform: rotate(-90deg);
+}
+
+#progress .scrollIndicator {
+	stroke: rgba(255, 255, 255, 0.5);
+}
+
+/* circle {
+	stroke-dashoffset: 0;
+	stroke-width: 15%;
+	fill: none;
+} */
+
+.progress-bar {
+	width: 95vw;
+	height: 1rem;
+	position: fixed;
+	margin-top: 0.5rem;
+	top: 0;
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 1rem;
+}
+
+.progress-indicator {
+	/* position: fixed; */
+	background: white;
+	transform-origin: 0%;
+	position: fixed;
+	margin-top: 0.5rem;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.iconBackground {
+	width: 11rem;
+	height: 11rem;
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 2rem;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+}
+
+.iconItem {
+	background-color: rgba(255, 255, 255, 0.5);
+	width: 4rem;
+	height: 4rem;
+	border-radius: 50%;
+	margin: 0 0.25rem;
+}
+
+.flexCol {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 0 1rem;
+}
+
+.tickUL {
+	list-style-image: url(../public/tick.svg);
+}

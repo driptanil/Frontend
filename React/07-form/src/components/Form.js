@@ -39,8 +39,7 @@ export const Form = () => {
 
 	const {
 		register,
-		handleSubmit,
-		formState: { errors },
+		handleSubmit, 
 	} = useForm({
 		resolver: yupResolver(schema),
 		// `useForm` sets resolver to be the `yupResolver`
